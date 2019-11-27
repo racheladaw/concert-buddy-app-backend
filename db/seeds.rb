@@ -11,3 +11,10 @@
 # concert1 = Concert.create(date: "11-28-2019", price_range: "50-100", upcoming: true)
 #
 # rachel.saved_concerts.create(concert_id: concert1)
+rachel = User.first
+concert1 = Concert.first
+seattle = Location.first
+
+# seattle = Location.create(city: "Seattle", state: "Washington", country: "United States of America")
+# rachel.update(location: seattle)
+# concert1.update(location: seattle)
