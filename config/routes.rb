@@ -7,6 +7,7 @@ Rails.application.routes.draw do
       resources :users
       resources :concerts
       resources :locations
+      resources :artists
     end
   end
 end
