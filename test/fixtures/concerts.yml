@@ -1,0 +1,11 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  date: 2019-11-27
+  price_range: MyString
+  upcoming: false
+
+two:
+  date: 2019-11-27
+  price_range: MyString
+  upcoming: false
