@@ -4,7 +4,7 @@ Rails.application.routes.draw do
   # namespace routes to look like localhost:3000.com/api/v1/resource
   namespace :api do
     namespace :v1 do
-      get '/login', to: 'sessions#create'
+      post '/login', to: 'sessions#create'
       resources :users
       resources :concerts
       resources :locations
