@@ -26,7 +26,7 @@ class Api::V1::SessionsController < ApplicationController
     session.clear
     render json: {
       notice: "You are now logged out"
-    }
+    }, status: :ok
   end
 
 end
