@@ -7,6 +7,7 @@ Rails.application.routes.draw do
       post '/login', to: 'sessions#create'
       get '/get_current_user', to: 'sessions#getCurrentUser'
       delete '/logout', to: 'sessions#destroy'
+      get '/get_upcoming_concerts', to: 'concerts#upcomingConcerts'
       resources :users
       resources :concerts
       resources :locations
