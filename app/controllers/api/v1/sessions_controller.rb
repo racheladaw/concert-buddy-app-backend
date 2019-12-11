@@ -6,7 +6,7 @@ module Api
 
         if @user && @user.authenticate(params[:session][:password])
           session[:user_id] = @user.id
-          render json: UserSerializer.new(@user)
+          render json: UserSerializer.new(@user), status: :ok
         else
           render json: {
             error: "Invalid Credentials"
@@ -33,4 +33,4 @@ module Api
 
     end
   end
-end 
+end
