@@ -5,6 +5,7 @@ Rails.application.routes.draw do
   namespace :api do
     namespace :v1 do
       post '/login', to: 'sessions#create'
+      post '/signup', to: 'users#create'
       get '/get_current_user', to: 'sessions#getCurrentUser'
       delete '/logout', to: 'sessions#destroy'
       get '/get_upcoming_concerts', to: 'concerts#upcomingConcerts'
