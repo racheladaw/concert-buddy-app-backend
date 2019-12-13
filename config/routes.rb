@@ -9,6 +9,7 @@ Rails.application.routes.draw do
       get '/get_current_user', to: 'sessions#getCurrentUser'
       delete '/logout', to: 'sessions#destroy'
       get '/get_upcoming_concerts', to: 'concerts#upcomingConcerts'
+      post '/save_concert', to: 'saved_concerts#create'
       resources :users
       resources :concerts
       resources :locations
