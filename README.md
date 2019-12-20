@@ -10,7 +10,7 @@ To get started using this app do the following:
 
 - Clone the repository
   - ```git clone https://github.com/racheladaw/concert-buddy-app-backend.git```
-- Navigate to the top of the 'quick-recipe-api' directory
+- Navigate to the top of the concert buddy backend directory
   - ```cd concert-buddy-app-backend```
 - Install required gem dependencies
   - ```bundle install```
