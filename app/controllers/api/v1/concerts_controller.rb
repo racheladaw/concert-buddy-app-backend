@@ -30,6 +30,19 @@ module Api
         render json: ConcertSerializer.new(concerts).serialized_json
 
       end
+
+      def getUsersOfConcert
+        concert = Concert.find(concert_params)
+        users = concert.users
+
+        render json: UserSerializer.new(users).serialized_json
+      end
+
+      private
+
+      def concert_params
+        params.require(:concert_id)
+      end
     end
   end
 end
