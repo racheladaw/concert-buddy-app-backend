@@ -12,6 +12,7 @@ Rails.application.routes.draw do
       get '/get_concert_data', to: 'concerts#getUpcomingConcertsFromSongkick'
       post '/save_concert', to: 'saved_concerts#create'
       get '/saved_concerts', to: 'saved_concerts#index'
+      get '/concert/:concert_id/users', to: 'concerts#getUsersOfConcert'
       resources :users
       resources :concerts
       resources :locations
