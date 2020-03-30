@@ -14,6 +14,7 @@ Rails.application.routes.draw do
       get '/saved_concerts', to: 'saved_concerts#index'
       get '/concert/:concert_id/users', to: 'concerts#getUsersOfConcert'
       resources :users
+      post '/users/:id/upload_photo', to: 'users#uploadPhoto'
       resources :concerts
       resources :locations
       resources :artists
