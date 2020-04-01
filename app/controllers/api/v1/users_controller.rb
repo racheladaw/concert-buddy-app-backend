@@ -27,7 +27,13 @@ class Api::V1::UsersController < ApplicationController
     # need functionality to take file from params and add photo to database
 
     @user.profile_picture.attach(profile_picture_params[:profile_picture])
-    byebug
+
+    if @user.profile_picture.attached?
+      profile_picture_serializer = ProfilePictureSerializer.new(profile_picture: @user.profile_picture, user: @user)
+      render json: profile_picture_serializer.serialize_new_profile_picture()
+    else
+      render json: {errors: "No profile picture attached"}, status: 400
+    end
   end
 
   private
