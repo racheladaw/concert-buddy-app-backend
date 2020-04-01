@@ -4,6 +4,8 @@ class User < ApplicationRecord
   has_many :concerts, through: :saved_concerts
   belongs_to :location
 
+  has_one_attached :profile_picture
+
   validates :name, :username, presence: true
   validates :username, uniqueness: true
 end
