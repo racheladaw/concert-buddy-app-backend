@@ -10,4 +10,10 @@ class UserSerializer
       country: user.location.country
     }
   end
+
+  attribute :profile_picture do |user|
+    {
+      image_url: user.get_profile_picture_url()
+    }
+  end 
 end
