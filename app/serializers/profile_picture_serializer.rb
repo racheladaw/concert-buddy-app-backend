@@ -10,7 +10,9 @@ class ProfilePictureSerializer
     serialized_new_profile_picture.to_json()
   end
 
-  private def serialize_profile_picture(profile_picture, user)
+  private
+
+  def serialize_profile_picture(profile_picture, user)
     {
       profile_picture: {
         user_id: user.id,
