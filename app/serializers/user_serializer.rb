@@ -15,5 +15,5 @@ class UserSerializer
     {
       image_url: user.get_profile_picture_url()
     }
-  end 
+  end
 end
