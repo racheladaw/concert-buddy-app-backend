@@ -36,6 +36,16 @@ class Api::V1::UsersController < ApplicationController
     end
   end
 
+  def show
+    @user = User.find(params[:id])
+
+    if @user
+      render json: UserSerializer.new(@user).serialized_json
+    else
+      render json: {error: "User unable to be found"}
+    end
+  end
+
   private
 
   def user_params
