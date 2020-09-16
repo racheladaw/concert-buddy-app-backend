@@ -12,6 +12,8 @@ class User < ApplicationRecord
   validates :username, uniqueness: true
 
   def get_profile_picture_url
-    url_for(self.profile_picture)
+    if self.profile_picture.attached? 
+      url_for(self.profile_picture)
+    end
   end
 end
