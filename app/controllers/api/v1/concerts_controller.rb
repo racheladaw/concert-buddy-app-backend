@@ -14,7 +14,6 @@ module Api
         data = l.get_concert_data
 
         data["events"].each do |event|
-          concert = Concert.new(location_id: current_user.location_id)
           artist = Artist.find_or_create_by(name: event["performers"].first["name"])
           concert = Concert.find_or_create_by(location_id: current_user.location_id, artist: artist, date: event["datetime_local"].slice(0, 10))
           concert.price_range = "#{event["stats"]["lowest_price"]}-#{event["stats"]["highest_price"]}"
