@@ -123,6 +123,9 @@ GEM
     rails_12factor (0.0.3)
       rails_serve_static_assets
       rails_stdout_logging
+    rails_same_site_cookie (0.1.8)
+      rack (>= 1.5)
+      user_agent_parser (~> 2.5)
     rails_serve_static_assets (0.0.5)
     rails_stdout_logging (0.0.5)
     railties (5.2.3)
@@ -158,6 +161,7 @@ GEM
     unf (0.1.4)
       unf_ext
     unf_ext (0.0.7.6)
+    user_agent_parser (2.7.0)
     websocket-driver (0.7.1)
       websocket-extensions (>= 0.1.0)
     websocket-extensions (0.1.4)
@@ -179,6 +183,7 @@ DEPENDENCIES
   rack-cors (>= 1.0.4)
   rails (~> 5.2.3)
   rails_12factor
+  rails_same_site_cookie
   rest-client
   spring
   spring-watcher-listen (~> 2.0.0)

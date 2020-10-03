@@ -56,5 +56,5 @@ Rails.application.configure do
 
   config.log_level = :debug
 
-  config.session_store :cookie_store
+  # config.session_store :cookie_store
 end

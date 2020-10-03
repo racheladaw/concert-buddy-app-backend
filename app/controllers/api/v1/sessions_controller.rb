@@ -6,8 +6,6 @@ module Api
 
         if @user && @user.authenticate(params[:session][:password])
           session[:user_id] = @user.id
-          puts "here is the session"
-          puts session[:user_id]
           render json: UserSerializer.new(@user), status: :ok
         else
           render json: {
