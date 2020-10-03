@@ -55,6 +55,4 @@ Rails.application.configure do
   Rails.application.routes.default_url_options = { host: "http://localhost:3001" }
 
   config.log_level = :debug
-
-  # config.session_store :cookie_store
 end
